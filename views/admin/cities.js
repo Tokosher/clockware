@@ -1,4 +1,3 @@
-// UI for admin panel
 module.exports = () => {
     return `
         <!DOCTYPE html>
@@ -12,6 +11,7 @@ module.exports = () => {
       </head>
      
      <body>
+     
      <header>
           <nav class="navbar navbar-bottom">
             <div class="container navbar-container">
@@ -27,8 +27,7 @@ module.exports = () => {
      <div class="columns is-left">
         <div class="column is-one-quarter">
      <form method="POST">
-         <input required class="input" name="name" type="text" placeholder="Enter name"> <br> <br>
-         <input required class="input" name="rate" type="text" placeholder="Enter rate"> <br> <br> 
+         <input required class="input" name="city" type="text" placeholder="Enter new city"> <br> <br>
              <button class="button is-primary">Submit</button>
         </div>
       </div>
