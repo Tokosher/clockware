@@ -4,7 +4,6 @@ const viewCities = (list) => {
          <option>${city.city}</option>
         `
     ).join('');
-    console.log(result);
 
     return `
     <select name="city">
@@ -70,9 +69,6 @@ module.exports = ({ errors, cities }) => {
 $("#datetime").datetimepicker();
 </script>
 
-<!--<script >
-$("#editable").editableSelect({ effects: 'slide' });
-</script>-->
 </body>
     `
 };

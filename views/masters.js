@@ -1,4 +1,3 @@
-// list of masters
 module.exports = (content) => {
 
     const masters = content.map(item => {
