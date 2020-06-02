@@ -1,12 +1,6 @@
 const { check } = require('express-validator');
 
 module.exports = {
-    // valid size
-    validSize: check('size')
-        .trim()
-        .toFloat()
-        .isFloat({min: 1})
-        .withMessage('Must be a number greater that 1'),
     // valid name
     validName: check('name')
         .trim()

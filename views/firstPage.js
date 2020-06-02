@@ -52,7 +52,19 @@ module.exports = async ({req, errors }) => {
          <p class="help is-danger">${getError(errors, 'name')}</p>
          <input required class="input" name="email" type="text" placeholder="Enter your email"><br> <br>
          <p class="help is-danger">${getError(errors, 'email')}</p>
-         <input required class="input" name="size" type="text" placeholder="Enter size"><br> <br>
+         <!--<input required class="input" name="size" type="text" placeholder="Enter size"><br> <br>-->
+         <div class="field">
+            <div class="control">
+                <div class="select">
+                    <select name="size">
+                        <option disabled selected>Выберете размер часов</option>
+                        <option>Маленькие</option>
+                        <option>Средние</option>
+                        <option>Большие</option>
+                    </select>
+                </div>
+             </div>
+        </div>
          <p class="help is-danger">${getError(errors, 'size')}</p>
          
          <div class="field">
@@ -65,7 +77,7 @@ module.exports = async ({req, errors }) => {
         
          <div class="field">
           <div class="control">
-              <input autocomplete="off" id="datetime" name="date"> <br> <br>
+              <input autocomplete="off" id="datetime" name="date" placeholder="Выберите дату и время"> <br>
           </div>
         </div>
              <button class="button is-primary">Submit</button>

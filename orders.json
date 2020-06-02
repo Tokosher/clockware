@@ -1,80 +1,101 @@
 [
   {
-    "name": "Max",
+    "name": "Anatoliy",
     "email": "test10@test.com",
-    "size": "25",
-    "city": "Dnipro",
-    "time": "22.05.20 13:00"
-  },
-  {
-    "name": "sd",
-    "email": "sd",
-    "size": "sd",
-    "city": "sd",
-    "time": "sd"
-  },
-  {
-    "name": "ds",
-    "email": "@sdfawf",
-    "size": 0,
-    "city": "2222",
-    "time": "dsdasd"
-  },
-  {
-    "name": "sd",
-    "email": "@sd",
-    "size": null,
-    "city": "sd",
-    "time": "sd"
-  },
-  {
-    "name": "sd",
-    "email": "@sd",
-    "size": null,
-    "city": "sd",
-    "time": "sd"
-  },
-  {
-    "name": "sa",
-    "email": "@ads",
-    "size": null,
-    "city": "asd",
-    "time": "asd"
-  },
-  {
-    "name": "sdsd",
-    "email": "test10@test.com",
-    "size": 23,
-    "city": "Днепр"
-  },
-  {
-    "name": "dasd",
-    "email": "test10@test.com",
-    "size": 23,
-    "city": "Днепр",
-    "time": "2020-05-06"
-  },
-  {
-    "name": "dsadasd",
-    "email": "tkachio123@gmail.com",
-    "size": 23,
+    "size": "Маленькие",
     "city": "Ужгород",
-    "date": "2020/05/04 09:00"
-  },
-  {
-    "name": "sddsf",
-    "email": "kytyz@gmail.com",
-    "size": 23,
-    "city": "Днепр",
-    "date": "2020/05/12 17:00",
-    "id": "4e0656a9"
+    "date": [
+      "Invalid Date"
+    ],
+    "id": "fe21f87e"
   },
   {
     "name": "Anatoliy",
     "email": "test10@test.com",
-    "size": 23,
+    "size": "Маленькие",
     "city": "Ужгород",
-    "date": "2020/06/18 21:00",
-    "id": "4468d1cf"
+    "date": [
+      "20-06-08 3:00:00"
+    ],
+    "id": "d690dafb"
+  },
+  {
+    "name": "Anatoliy",
+    "email": "test10@test.com",
+    "size": "Большие",
+    "city": "Ужгород",
+    "date": [
+      "Invalid Date",
+      "Invalid Date",
+      "Invalid Date"
+    ],
+    "id": "1b11f6aa"
+  },
+  {
+    "name": "Anatoliy",
+    "email": "test10@test.com",
+    "size": "Большие",
+    "city": "Ужгород",
+    "date": [
+      "20-06-01 0:00:00",
+      "20-06-01 1:00:00",
+      "20-06-01 2:00:00"
+    ],
+    "id": "3fc84428"
+  },
+  {
+    "name": "Anatoliy",
+    "email": "tkachio123@gmail.com",
+    "size": "Средние",
+    "city": "Ужгород",
+    "date": [
+      "20-06-01 4:00:00",
+      "20-06-01 5:00:00"
+    ],
+    "id": "5c894cb7"
+  },
+  {
+    "name": "Anatoliy",
+    "email": "tkachio123@gmail.com",
+    "size": "Маленькие",
+    "city": "Ужгород",
+    "date": [
+      "20-06-01 5:00:00"
+    ],
+    "id": "95e9a9f5"
+  },
+  {
+    "name": "Anatoliy",
+    "email": "tkachio123@gmail.com",
+    "size": "Маленькие",
+    "city": "Ужгород",
+    "date": [
+      "20-06-01 5:00:00"
+    ],
+    "id": "a745db62"
+  },
+  {
+    "name": "Anatoliy",
+    "email": "test10@test.com",
+    "size": "Большие",
+    "city": "Днепр",
+    "date": [
+      "20-06-01 3:00:00",
+      "20-06-01 4:00:00",
+      "20-06-01 5:00:00"
+    ],
+    "id": "c81efbb7"
+  },
+  {
+    "name": "Anatoliy",
+    "email": "test10@test.com",
+    "size": "Большие",
+    "city": "Ужгород",
+    "date": [
+      "20-06-01 2:00:00",
+      "20-06-01 3:00:00",
+      "20-06-01 4:00:00"
+    ],
+    "id": "f204a2a5"
   }
 ]

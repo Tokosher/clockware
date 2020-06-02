@@ -1,20 +1,14 @@
 [
   {
-    "name": "Anton",
-    "rate": "15",
-    "city": "Ужгород",
-    "id": "d7261549"
-  },
-  {
     "name": "Anatoliy",
     "rate": "4",
-    "city": "Днепр",
-    "id": "7a5e58c1"
+    "city": "Ужгород",
+    "id": "4b00c024"
   },
   {
-    "name": "Anatoliy",
-    "rate": "5",
+    "name": "Andrey",
+    "rate": "4",
     "city": "Ужгород",
-    "id": "abde8065"
+    "id": "59e395bf"
   }
 ]

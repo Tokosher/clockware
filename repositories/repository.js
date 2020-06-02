@@ -48,4 +48,22 @@ module.exports = class Repository {
     randomId() {
         return crypto.randomBytes(4).toString('hex');
     }
+
+    async getOneBy(filters) { // inside you can put method and value
+        const records = await this.getAll();
+
+        for (let record of records) {
+            let found = true;
+
+            for (let key in filters) {
+                if (record[key] !== filters[key]) {
+                    found = false;
+                }
+            }
+
+            if (found) {
+                return record;
+            }
+        }
+    }
 };
