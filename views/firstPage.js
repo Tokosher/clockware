@@ -1,4 +1,6 @@
-const viewCities = (list) => {
+const viewCities = require('../routes/cityList');
+
+/*const viewCities = (list) => {
     const result = list.map(city =>
          `
          <option>${city.city}</option>
@@ -11,7 +13,7 @@ const viewCities = (list) => {
     </select>
     `;
 
-};
+};*/
 
 const getError = (errors, prop) => {
     try {
@@ -21,7 +23,12 @@ const getError = (errors, prop) => {
     }
 };
 
-module.exports = ({ errors, cities }) => {
+const idUser = (id) => {
+    if (id) return `Your id: ${id}`;
+        return ''
+};
+
+module.exports = async ({req, errors }) => {
     return `
      <!DOCTYPE html>
       <head>
@@ -39,6 +46,7 @@ module.exports = ({ errors, cities }) => {
      <div class="container">
      <div class="columns is-centered">
      <div class="column is-one-quarter">
+     <p>${idUser(req.session.userID)}</p>
      <form method="POST">
          <input required class="input" name="name" type="text" placeholder="Enter your name"> <br> <br>
          <p class="help is-danger">${getError(errors, 'name')}</p>
@@ -50,7 +58,7 @@ module.exports = ({ errors, cities }) => {
          <div class="field">
             <div class="control">
                 <div class="select">
-                    ${viewCities(cities)}
+                    ${await viewCities()}
                 </div>
              </div>
         </div>

@@ -12,9 +12,7 @@ const {
 const router = express.Router();
 
 router.get('/order', async (req, res) => {
-    const cities = await Repo.getAll();
-
-    res.send(mainPage({cities}));
+    res.send(await mainPage({ req }));
 });
 
 router.post('/order',
@@ -27,7 +25,8 @@ router.post('/order',
 
     const { name, email, size, city, date, time } = req.body;
     const user = await usersRepo.create({ name, email, size, city, date, time });
-    res.redirect('/masterlist')
+        req.session.userID = user.id;
+            res.redirect('/masterlist')
 });
 
 module.exports = router;

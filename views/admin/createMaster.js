@@ -1,4 +1,6 @@
-module.exports = () => {
+const viewCities = require('../../routes/cityList');
+
+module.exports = async () => {
     return `
         <!DOCTYPE html>
       <head>
@@ -28,6 +30,15 @@ module.exports = () => {
      <form method="POST">
          <input required class="input" name="name" type="text" placeholder="Enter name"> <br> <br>
          <input required class="input" name="rate" type="text" placeholder="Enter rate"> <br> <br> 
+         <!--<input required class="input" name="city" type="text" placeholder="Choose a city"> <br> <br> -->
+         
+         <div class="field">
+            <div class="control">
+                <div class="select">
+                    ${await viewCities()}
+                </div>
+             </div>
+        </div>
              <button class="button is-primary">Submit</button>
         </div>
       </div>

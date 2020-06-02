@@ -1,4 +1,5 @@
 const fs = require('fs');
+const crypto = require('crypto');
 
 module.exports = class Repository {
     constructor(filename) {
@@ -15,6 +16,8 @@ module.exports = class Repository {
     }
 
     async create(attrs) {
+        attrs.id = this.randomId();
+
         const records = await this.getAll();
         records.push(attrs);
         await this.writeAll(records);
@@ -35,5 +38,14 @@ module.exports = class Repository {
             this.filename,
             JSON.stringify(records, null, 2)
         );
+    }
+
+    async getOne(id) {
+        const records = await this.getAll();
+        return records.find(record => record.id === id);
+    }
+
+    randomId() {
+        return crypto.randomBytes(4).toString('hex');
     }
 };
