@@ -3,7 +3,6 @@ const mainPage = require('../views/firstPage');
 const usersRepo = require('../repositories/newOrder');
 //const Repo = require('../repositories/addCity');
 const {validationResult} = require('express-validator');
-const reservedTimes = require('../repositories/reserverTimeMasters');
 const {
     validName,
     validMail
@@ -26,10 +25,6 @@ router.post('/order',
 
         const {name, email, size, city, date} = req.body;
 
-        // чекнуть не занято ли время
-        // если занято, то выдать сообщение, что время занято (в последующем через мейн пейдж)
-
-        // Если не занято, то сделать запись в файле, где хранится всё время мастеров в зависимости от размера часов, пооработать с датой и временем
         const parsedDate = Date.parse(date);
         let hours = 1;
 

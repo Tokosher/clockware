@@ -1,20 +1,5 @@
 const viewCities = require('../routes/cityList');
 
-/*const viewCities = (list) => {
-    const result = list.map(city =>
-         `
-         <option>${city.city}</option>
-        `
-    ).join('');
-
-    return `
-    <select name="city">
-        ${result}
-    </select>
-    `;
-
-};*/
-
 const getError = (errors, prop) => {
     try {
         return errors.mapped()[prop].msg
@@ -77,7 +62,7 @@ module.exports = async ({req, errors }) => {
         
          <div class="field">
           <div class="control">
-              <input autocomplete="off" id="datetime" name="date" placeholder="Выберите дату и время"> <br>
+              <input required autocomplete="off" id="datetime" name="date" placeholder="Выберите дату и время"> <br>
           </div>
         </div>
              <button class="button is-primary">Submit</button>

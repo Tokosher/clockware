@@ -10,18 +10,4 @@ module.exports = (content) => {
     <h3>Name - rate - city</h3>
         ${masters}
     `
-
-    /*const masters = content.map(person => {
-        return `
-        <li>${person.name} - ${person.rate} - ${person.city}</li>
-        `
-    }).join('');
-
-    return `
-    <ul>
-    <h3>Name - rate - city</h3>
-        ${masters}
-    </ul>
-    `*/
-
 };

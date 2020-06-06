@@ -9,7 +9,7 @@ module.exports = {
     // valid mail
     validMail: check('email')
         .trim()
-        .normalizeEmail()
+        //.normalizeEmail()
         .isEmail()
         .withMessage('Must provide a valid email'),
     // valid master name for admins
