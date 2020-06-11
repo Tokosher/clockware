@@ -18,7 +18,7 @@ router.post('/admin/newmaster',
     const master = await mastersRepo.getOneBy({ name, rate, city });
     await reservedTimesRepo.create({ name, id: master.id, reservedTime: [] });
 
-    res.redirect('/masterlist');
+    res.send('You create a new master!');
 });
 
 module.exports = router;

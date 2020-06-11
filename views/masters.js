@@ -1,9 +1,12 @@
-module.exports = (content) => {
+module.exports = (content, userCity) => {
 
     const masters = content.map(person => {
-        return `
+
+        if(person.city === userCity) {
+            return `
         <a href="./master/${person.id}">${person.name} - ${person.rate} - ${person.city}</a> <br>
         `
+        }
     }).join('');
 
     return `

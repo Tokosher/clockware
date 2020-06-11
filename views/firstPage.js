@@ -1,4 +1,4 @@
-const viewCities = require('../routes/cityList');
+const viewCities = require('./cityList');
 
 const getError = (errors, prop) => {
     try {
@@ -8,7 +8,7 @@ const getError = (errors, prop) => {
     }
 };
 
-const idUser = (id) => {
+const idUser = ({ userID:id }) => {
     if (id) return `Your id: ${id}`;
         return ''
 };
@@ -31,13 +31,12 @@ module.exports = async ({req, errors }) => {
      <div class="container">
      <div class="columns is-centered">
      <div class="column is-one-quarter">
-     <p>${idUser(req.session.userID)}</p>
+    <p>${idUser(req.session)}</p>
      <form method="POST">
          <input required class="input" name="name" type="text" placeholder="Enter your name"> <br> <br>
          <p class="help is-danger">${getError(errors, 'name')}</p>
          <input required class="input" name="email" type="text" placeholder="Enter your email"><br> <br>
          <p class="help is-danger">${getError(errors, 'email')}</p>
-         <!--<input required class="input" name="size" type="text" placeholder="Enter size"><br> <br>-->
          <div class="field">
             <div class="control">
                 <div class="select">

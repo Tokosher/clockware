@@ -5,6 +5,7 @@ const newMaster = require('./routes/admin/createMaster');
 const masterList = require('./routes/masterList');
 const newCity = require('./routes/admin/addCity');
 const selectedMaster = require('./routes/selectedMaster');
+const signOut = require('./routes/signOut');
 
 const cookieSession = require('cookie-session');
 
@@ -22,6 +23,7 @@ app.use(
 app.use(makeOrder); // orders from users
 app.use(masterList); // list of Masters
 app.use(selectedMaster);
+app.use(signOut);
 
 // admin panel
 app.use(newMaster); // create masters for admins

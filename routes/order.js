@@ -1,7 +1,6 @@
 const express = require('express');
 const mainPage = require('../views/firstPage');
 const usersRepo = require('../repositories/newOrder');
-//const Repo = require('../repositories/addCity');
 const {validationResult} = require('express-validator');
 const {
     validName,
@@ -11,7 +10,7 @@ const {
 const router = express.Router();
 
 router.get('/order', async (req, res) => {
-    res.send(await mainPage({req}));
+    res.send(await mainPage({ req }));
 });
 
 const MILLISECOND_IN_HOUR = 3600000;
@@ -46,7 +45,6 @@ router.post('/order',
         }
 
         const resultArr = arrParsed.map(date => {
-            console.log(date);
             return new Date(date).toLocaleTimeString('nu', {year: "2-digit", month: "2-digit", day: "2-digit"})
         });
 

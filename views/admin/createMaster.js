@@ -1,4 +1,4 @@
-const viewCities = require('../../routes/cityList');
+const viewCities = require('../cityList');
 
 module.exports = async () => {
     return `
