@@ -16,18 +16,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
     cookieSession({
-    keys: ['ldjfnrnwisjdfbgsuvufisjsisyrhnfjh'] // encryption key
+    keys: ['ldjfnrnwisjdfbgsuvufisjsisyrhnfjh']
 }));
 
 // UI
-app.use(makeOrder); // orders from users
-app.use(masterList); // list of Masters
+app.use(makeOrder);
+app.use(masterList);
 app.use(selectedMaster);
 app.use(signOut);
 
 // admin panel
-app.use(newMaster); // create masters for admins
-app.use(newCity); // add new city
+app.use(newMaster);
+app.use(newCity);
+
+// mail
+
+
 
 app.listen(3000, () => {
     console.log("Listening")

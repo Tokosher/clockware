@@ -8,7 +8,8 @@ const getError = (errors, prop) => {
     }
 };
 
-const idUser = ({ userID:id }) => {
+const idUser = ({ session }) => {
+    const id = session.userID;
     if (id) return `Your id: ${id}`;
         return ''
 };
@@ -31,7 +32,7 @@ module.exports = async ({req, errors }) => {
      <div class="container">
      <div class="columns is-centered">
      <div class="column is-one-quarter">
-    <p>${idUser(req.session)}</p>
+    <p>${idUser(req)}</p>
      <form method="POST">
          <input required class="input" name="name" type="text" placeholder="Enter your name"> <br> <br>
          <p class="help is-danger">${getError(errors, 'name')}</p>
