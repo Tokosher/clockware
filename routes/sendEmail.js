@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
 
-module.exports = async () => {
+module.exports = async ({ name, email }) => {
+
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -14,9 +15,9 @@ module.exports = async () => {
 
     let mailOptions = {
         from: 'clockware.123@gmail.com',
-        to: 'tkach.io123@gmail.com',
-        subject: 'TEST',
-        text: 'You have ordered a master, congrats!'
+        to: `${email}`,
+        subject: 'ClockWare Company',
+        text: `Dear ${name}, you have successfully ordered a master!`
     };
 
     await transporter.sendMail(mailOptions)

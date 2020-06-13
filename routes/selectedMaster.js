@@ -27,7 +27,7 @@ router.get('/master/:id', async (req, res) => {
             }
         }
     }
-    await sendMail();
+    await sendMail(userOrder);
     await ReservedTimeRepo.pushTime(req.params.id, userOrderTime);
 
     res.send(`You choose a master ${master.name}`);
